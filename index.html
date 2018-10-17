@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Form freeCodeCamp Project 2018</title>
+  
+  
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <!-- 
+1. User Story #1: I can see a title with id="title" in H1 sized text.
+User Story #2: I can see a short explanation with id="description" in P sized text.
+User Story #3: I can see a form with id="survey-form".
+User Story #4: Inside the form element, I am required to enter my name in a field with id="name".
+User Story #5: Inside the form element, I am required to enter an email in a field with id="email".
+User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error.
+User Story #7: Inside the form, I can enter a number in a field with id="number".
+User Story #8: If I enter non-numbers in the number input, I will see an HTML5 validation error.
+User Story #9: If I enter numbers outside the range of the number input, I will see an HTML5 validation error.
+User Story #10: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label".
+User Story #11: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field.
+User Story #12: Inside the form element, I can select an option from a dropdown that has a corresponding id="dropdown".
+User Story #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute.
+User Story #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute.
+User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments.
+User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs.
+You can build your project by forking this CodePen pen. Or you can use this CDN link to run the tests in any environment you like: https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js
+
+
+-->
+<!-- head -->
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Pacifico" rel="stylesheet">
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://cdn.rawgit.com/kybarg/mdl-selectfield/mdl-menu-implementation/mdl-selectfield.min.js"></script>
+    <script src="https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/kybarg/mdl-selectfield/mdl-menu-implementation/mdl-selectfield.min.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-green.min.css">
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Contact Section -->
+    <div class="card">
+        <h1 id="title">Contact Me</h1>
+        <p id="description">Please fill this out</p>
+        <div>
+            <form id="survey-form">
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <input required class="mdl-textfield__input" type="text" name="name" id="name" placeholder="Name">
+                    <label for="name" id="name-label" class="mdl-textfield__label">Name</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <label class="mdl-textfield__label" for="email" id="email-label">Email</label>
+                    <input class="mdl-textfield__input" required type="email" name="email" id="email" placeholder="Email">
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <label class="mdl-textfield__label" for="number" id="number-label">Age</label>
+                    <input class="mdl-textfield__input" type="number" min="1" max="150" name="age" id="number" placeholder="Age">
+                    <span class="mdl-textfield__error">Input is not a number or within range!</span>
+                </div>
+<!-- Survey Feedback Questionaire -->
+                <div class="mdl-selectfield mdl-js-selectfield mdl-selectfield--floating-label">
+                    <select class="mdl-selectfield__select" name="type" id="dropdown" placeholder="Who are you?">
+                  <option value="stranger">Stranger</option>
+                  <option value="friend">Friend</option>
+                </select>
+                    <label class="mdl-selectfield__label" for="dropdown" id="dropdown-label">Who are you?</label>
+                </div>
+                <br>
+                <div class="radio-spacing">
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="positive">
+     <input type="radio" id="positive" class="mdl-radio__button" name="opinions" value="1" checked>
+     <span class="mdl-radio__label">Positive</span>
+   </label>
+                    <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="negative">
+     <input type="radio" id="negative" class="mdl-radio__button" name="opinions" value="2">
+     <span class="mdl-radio__label">Negative</span>
+   </label>
+                </div>
+                <br>
+                <div class="radio-spacing">
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+  <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input checkbox-margin" checked>
+  <span class="mdl-checkbox__label">Helpful</span>
+</label>
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
+  <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input checkbox-margin" checked>
+  <span class="mdl-checkbox__label">Funny</span>
+</label>
+                    <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
+<input type="checkbox" id="checkbox-3" class="mdl-checkbox__input checkbox-margin" checked>
+<span class="mdl-checkbox__label">Interesting</span>
+</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="value-div">
+                    <textarea class="mdl-textfield__input" type="text" id="text-area"></textarea>
+                    <label class="mdl-textfield__label" for="text-area">Additional Comments</label>
+                </div>
+                <br>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" id="submit">
+  Submit
+</button>
+            </form>
+        </div>
+       <footer class="text-center">
+      <hr>
+      <p id="bottom_text"> <a href=" https://codepen.io/alexsjcho/" target="_blank">Alex Cho 2018 </a>| <a 
+                               href="https://alexsjcho.com" target="_blank">Blog</a> | <a href="https://www.linkedin.com/in/" target="_blank"><i class="fa fa-linkedin-square"></i></a> | <a 
+     
+     href="https://github.com/alexsjcho" target="_blank"><i 
+class="fa fa-github-square"></i></a> | <a 
+                                                href="https://www.instagram.com/alexsjch0/" target="_blank"><i class="fa fa-instagram"></i></a></p>
+    </footer>
+    </div>
+  
+</body>
+  <script src='https://gitcdn.link/repo/freeCodeCamp/testable-projects-fcc/master/build/bundle.js'></script>
+
+  
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+/*.form-inputs-spacing {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px solid red;
+}*/
+
+* {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background:linear-gradient(75deg, #C0C0C0, #ffb499);
+    font-family: 'Montserrat', sans-serif;
+    /*line-height: 20px;*/
+    display: flex;
+    justify-content: center;
+}
+ /*card*/
+.card {
+    background: #fff;
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 2px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+form {
+    display: inline-block;
+    text-align: center;
+}
+
+#title {
+    font-family: 'Pacifico', cursive;
+    color: #185a9d;
+    text-shadow: -3px 5px 5px #43cea2;
+}
+
+.radio-spacing {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+/*.form-inputs-spacing {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px solid red;
+}*/
